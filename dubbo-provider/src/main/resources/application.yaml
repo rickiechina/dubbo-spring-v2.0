@@ -1,0 +1,31 @@
+# 下面是针对 dubbo-spring-boot-starter 0.2.0 版本的配置
+#spring:
+#  application:
+#    name: dubbo-provider
+#server:
+#  port: 9090
+#
+#dubbo:
+#  application:
+#    id: dubbo-provider-name
+#    name: dubbo-provider-name
+#  scan:
+#    basePackages: com.example.service.impl
+#  registry:
+#    id: my-registry
+#    address: zookeeper://127.0.0.1:2181
+#  protocol:
+#    id: dubbo
+#    name: dubbo
+#    port: 20880
+server:
+  port: 9090
+spring:
+  application:
+    name: dubbo-provider
+  dubbo:
+    server: true
+    registry: zookeeper://127.0.0.1:2181
+    protocol:
+      name: dubbo
+      port: 20880

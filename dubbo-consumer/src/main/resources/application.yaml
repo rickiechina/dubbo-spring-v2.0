@@ -1,0 +1,32 @@
+# 下面是针对 dubbo-spring-boot-starter 0.2.0 版本的配置
+#server:
+#  port: 8088
+#spring:
+#  application:
+#    name: dubbo-consumer
+#
+#dubbo:
+#  application:
+#    id: dubbo-consumer-name
+#    name: dubbo-consumer-name
+#  protocol:
+#    id: dubbo
+#    name: dubbo
+#    port: 20880
+#  registry:
+#    id: my-registry
+#    address: zookeeper://127.0.0.1:2181
+
+server:
+  port: 8088
+
+## Dubbo 服务消费者配置
+spring:
+  dubbo:
+    application:
+      name: dubbo-consumer
+    protocol:
+      name: dubbo
+      port: 20880
+    registry:
+      address: zookeeper://127.0.0.1:2181
